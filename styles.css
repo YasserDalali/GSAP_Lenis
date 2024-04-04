@@ -50,7 +50,7 @@ section { height: 100vh;
 /* .right-col img:hover {transform: rotate3d(1, 2, 0, 120deg); transition: transform 1s ease;} */
 
 
-.newstock {height: 200vh;}
+.newstock {height: 150vh;}
 .newstock h1 {position: sticky; top:40vh; z-index: -1;}
 
 .articles {margin-top: 30rem; display: flex; justify-content: center; align-items: center; gap: 4rem;}
