@@ -1,5 +1,5 @@
-const lenis = new Lenis();
 
+const lenis = new Lenis();
 lenis.on("scroll", (e) => {
   console.log(e);
 });
@@ -16,15 +16,39 @@ function getImageFileName() {
   var imageItem = document.getElementById("imageItem");
   var src = imageItem.src;
   var fileName = src.substring(src.lastIndexOf("/") + 1);
+  console.log(fileName)
   return fileName;
 }
+/*!=========== ======================================= */
 
+function switchItem(link) {
+    var imageItem = document.getElementById("imageItem");
+
+    if ('images/'+getImageFileName() != link) {
+      gsap.to(imageItem, { opacity: 0, duration: 0.75, x: 900 });
+  
+  
+       gsap.to(imageItem, {
+        opacity: 1,
+        duration: 0.75,
+        x: 0,
+        onStart: function () {
+          imageItem.src = link;
+        },
+        delay: 0.25,
+      });
+    }
+  }
+  
+  /*!=========== ======================================= */
+  
 /* ------------------------------------------- */
 window.addEventListener("load", function () {
   // GSAP Animation
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.from(".animated-title", {
+
     opacity: 0,
     y: 50,
     duration: 1,
@@ -86,24 +110,3 @@ gsap.to(".circle", {
     },
   },
 });
-/*!=========== ======================================= */
-
-function switchItem(link) {
-  var imageItem = document.getElementById("imageItem");
-  if (getImageFileName() != link) {
-    gsap.to(imageItem, { opacity: 0, duration: 0.75, x: 900 });
-
-
-     gsap.to(imageItem, {
-      opacity: 1,
-      duration: 0.75,
-      x: 0,
-      onStart: function () {
-        imageItem.src = link;
-      },
-      delay: 0.25,
-    });
-  }
-}
-
-/*!=========== ======================================= */
