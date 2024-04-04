@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap");
 * {margin: 0; padding: 0;}
 body {
+  overflow-x: hidden;
   font-family: Syne;
   background-color: #f0ebe8;
 }
-
+section { height: 100vh;
+}
 #hero {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .animated-title {
@@ -18,6 +20,7 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 800;
+  
 }
 
 .circle {
@@ -25,20 +28,27 @@ body {
   width: 700px;
   height: 700px;
   position: absolute;
-  right: 4rem;
-  top: 20rem;
+  right: 5rem;
+  top: 8rem;
   border-radius: 50%;
   z-index: -1;
+  
 }
 
-.collections {padding: 6rem; font-size: 4rem; display: flex; height: 100vh; align-items: center;}
+.collections {padding: 8rem; font-size: 4rem; display: flex; align-items: center;}
 .collections h3 {font-size: 1.4rem; margin-bottom: 1.5rem;}
 .collections ul {list-style-type: none; font-weight: 700;}
-.collections ul li {width: 100%;}
+.collections ul li {width: 100%; margin-top: 2rem;}
 .collections ul li:hover {color: orangered; cursor: pointer;}
 
 
 .left-col {width: 50%;}
 .right-col {width: 50%; height: 100%; display: flex; justify-content: end; align-items: center;}
 
-.right-col img {height: 600px;}
+.right-col img {height: 600px;
+}
+/* .right-col img:hover {transform: rotate3d(1, 2, 0, 120deg); transition: transform 1s ease;} */
+
+
+.newstock {height: 200vh;}
+.newstock h1 {position: sticky; top:40vh}
