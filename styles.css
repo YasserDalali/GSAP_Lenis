@@ -31,7 +31,7 @@ body {
   z-index: -1;
 }
 
-.collections {padding: 6rem; font-size: 4rem; display: flex;}
+.collections {padding: 6rem; font-size: 4rem; display: flex; height: 100vh; align-items: center;}
 .collections h3 {font-size: 1.4rem; margin-bottom: 1.5rem;}
 .collections ul {list-style-type: none; font-weight: 700;}
 .collections ul li {width: 100%;}
@@ -39,4 +39,6 @@ body {
 
 
 .left-col {width: 50%;}
-.right-col {width: 50%;}
+.right-col {width: 50%; height: 100%; display: flex; justify-content: end; align-items: center;}
+
+.right-col img {height: 600px;}
