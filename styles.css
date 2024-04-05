@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap');
 * {margin: 0; padding: 0;}
+:root {
+  --main-color: rgba(182, 49, 49, 0.656); /* Define a variable */
+}
+
 body {
   overflow-x: hidden;
   font-family: Syne ;
-  background-color: #f0ebe8;
+  background-color: #1f1515;
+  color: white;
 }
 section { height: 100vh;
 }
@@ -16,22 +21,30 @@ section { height: 100vh;
   
 }
 
+#hero video {
+  z-index: 2;
+  top: 0;
+  position: absolute;
+}
+
 .animated-title {
+  z-index: 3;
+  color: white;
   text-transform: uppercase;
   font-size: 100px;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 800;
-  
 }
+
 .mobile {display: none;}
 
 .circle {
-  background-color: rgba(238, 233, 81, 0.656);
+  background-color: var(--main-color);
   width: 700px;
   height: 700px;
   position: absolute;
-  right: 5rem;
+  right: 33.33%;
   top: 8rem;
   border-radius: 50%;
   z-index: -1;
@@ -78,21 +91,27 @@ section { height: 100vh;
 
 
 .marquee{
+  position: sticky;
+  top: 5rem;
   margin: 10rem 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  overflow: hidden;}
+  overflow: hidden;
+}
 
   .marquee h1{
-    
+    color: transparent;
+    font-weight: 800;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.3rem;
+    font-size: 10rem;
     display: inline-block;
     text-transform: uppercase;
     will-change: transform;
     transform: translateX(0);
-
     white-space: nowrap;
-    animation: marquee 1s linear infinite;
+    animation: marquee 3s linear infinite;
   }
 
 
