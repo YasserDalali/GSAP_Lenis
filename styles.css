@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap');
 * {margin: 0; padding: 0;}
 :root {
   --main-color: rgba(182, 49, 49, 0.656); /* Define a variable */
@@ -7,7 +8,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: Syne ;
+  font-family: Syne;
   background-color: rgb(47, 2, 19);
   color: white;
 }
@@ -32,7 +33,7 @@ body {
 .plant-overlay3
 {
   z-index: 3;
-  top: 250px;
+  top: 350px;
   left: 0;
 }
 
@@ -51,10 +52,10 @@ body {
 .shadow {
   z-index: 2;
   position: absolute;
-  top: 840px;
+  top: 940px;
 
   width: 100%;
-  height: 20rem;
+  height: 10rem;
   background-color: rgb(47, 2, 19);
   box-shadow: 1px -19px 33px 51px rgb(47, 2, 19);
   -webkit-box-shadow: 1px -19px 33px 51px rgb(47, 2, 19);
@@ -103,7 +104,7 @@ section { height: 100vh;
   
 }
 
-.collections {padding: 8rem; font-size: 4rem; display: flex; align-items: center;}
+.collections {padding: 6rem; font-size: 4rem; display: flex; align-items: center; margin: 2rem 0;}
 .collections h3 {font-size: 1.4rem; margin-bottom: 1.5rem;}
 .collections ul {list-style-type: none; font-weight: 700;}
 .collections ul li {width: 100%; margin-top: 2rem;}
@@ -127,6 +128,17 @@ section { height: 100vh;
 
 .gallery video {
   z-index: -4;  
+}
+.gallery {position:relative}
+.gallery-text {
+  background-color: black;
+  width: 350px;
+  padding: 3rem;
+  font-family: syne;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 20rem;
 }
 
 
@@ -153,6 +165,8 @@ section { height: 100vh;
 }
 
   .marquee h1{
+    font-weight: 80;
+    font-family: Jakatra;
     color: transparent;
     font-weight: 800;
     -webkit-text-stroke-color: white;

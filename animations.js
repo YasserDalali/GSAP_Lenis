@@ -96,6 +96,10 @@ window.addEventListener("load", function () {
     },
   });
 });
+
+
+
+
 gsap.from(".circle", {
   opacity: 1,
   duration: 0.5,
@@ -108,5 +112,18 @@ gsap.from(".circle", {
       const circle = document.querySelector(".circle");
       circle.style.top = `${self.scrollY}px`;
     },
+  },
+});
+
+
+gsap.from(".plant-overlay", {
+  opacity: 0,
+  x: 50,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".plant-overlay",
+    start: "top 80%",
+    end: "top 50%",
+    toggleActions: "play none none reverse",
   },
 });
