@@ -20,6 +20,12 @@ function getImageFileName() {
   return fileName;
 }
 /*!=========== ======================================= */
+document.addEventListener('DOMContentLoaded', function () {
+  var audio = document.getElementById('bgsong');
+  audio.volume = 0.1; // 10% volume
+  audio.play();
+});
+
 
 function switchItem(link) {
     var imageItem = document.getElementById("imageItem");
