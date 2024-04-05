@@ -20,12 +20,6 @@ function getImageFileName() {
   return fileName;
 }
 /*!=========== ======================================= */
-document.addEventListener('DOMContentLoaded', function () {
-  var audio = document.getElementById('bgsong');
-  audio.volume = 0.1; // 10% volume
-  audio.play();
-});
-
 
 function switchItem(link) {
     var imageItem = document.getElementById("imageItem");
@@ -102,7 +96,7 @@ window.addEventListener("load", function () {
     },
   });
 });
-gsap.to(".circle", {
+gsap.from(".circle", {
   opacity: 1,
   duration: 0.5,
   scrollTrigger: {

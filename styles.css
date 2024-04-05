@@ -11,6 +11,42 @@ body {
   background-color: #1f1515;
   color: white;
 }
+
+.plant-overlay {
+  position: absolute;
+}
+
+.plant-overlay1 
+{
+  top: 0;
+  left: 0;
+}
+
+.plant-overlay2
+{
+  z-index: -2;
+  top: 1200px;
+  right: 0;
+}
+
+.plant-overlay3
+{
+  top: 2750px;
+  left: 0;
+}
+
+.plant-overlay4 
+{
+  top: 0;
+  right: 0;
+}
+
+.plant-overlay5
+{
+  top: 4300px;
+  left: 0;
+}
+
 section { height: 100vh;
 }
 #hero {
