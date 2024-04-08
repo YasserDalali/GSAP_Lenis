@@ -184,16 +184,16 @@ section { height: 100vh;
 /* ----------------------------------------------------- */
 .cards {
    display: flex;
-   flex-direction: column; 
-   align-items: end;
+   align-items: center;
    height: fit-content;
 
   }
   .card video {width: 550px}
 .card {
-  margin: 3rem;
-  padding: 3rem;
-  background-color: var(--main-color);
+  z-index: 3;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: rgb(159, 44, 44);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -201,7 +201,7 @@ section { height: 100vh;
 
 .card:hover {
   cursor: pointer;
-  background-color: rgba(122, 33, 33, 0.656);
+  background-color: rgb(122, 33, 33);
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }

@@ -127,3 +127,18 @@ gsap.from(".plant-overlay", {
     toggleActions: "play none none reverse",
   },
 });
+
+let distance = document.querySelector('.articles').getBoundingClientRect().top - document.querySelector('#parfum3d').getBoundingClientRect().bottom;
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('#parfum3d', {
+  y: distance,
+  duration: 2, // Duration of the animation in seconds
+  ease: 'power1.out', // Ease out effect
+  scale: .7, // Scale the element to 1.7 times its original size
+  scrollTrigger: {
+    trigger: '.newbrands',
+    start: 'center', // Start the animation when the top of the trigger element reaches the center of the viewport
+    end: '+=1000', // End the animation 200 pixels below the start position of the trigger element
+    toggleActions: 'play reverse',
+  }
+});
