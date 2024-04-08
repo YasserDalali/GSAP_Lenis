@@ -103,22 +103,19 @@ window.addEventListener("load", function () {
 gsap.from(".circle", {
   opacity: 1,
   duration: 0.5,
+  scale:2,
   scrollTrigger: {
     trigger: ".circle",
     start: "top top", // when the top of the circle reaches the top of the viewport
-    end: "bottom bottom", // when the bottom of the circle reaches the bottom of the viewport
+    end: "top top", // when the bottom of the circle reaches the bottom of the viewport
     pin: true,
-    onUpdate: (self) => {
-      const circle = document.querySelector(".circle");
-      circle.style.top = `${self.scrollY}px`;
-    },
-  },
-});
+    }
+  },);
 
 
 gsap.from(".plant-overlay", {
   opacity: 0,
-  x: 50,
+  x: -50,
   duration: 1,
   scrollTrigger: {
     trigger: ".plant-overlay",
@@ -132,7 +129,7 @@ let distance = document.querySelector('.articles').getBoundingClientRect().top -
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('#parfum3d', {
   y: distance,
-  duration: 1,5, // Duration of the animation in seconds
+  duration: 1.5, // Duration of the animation in seconds
   ease: 'power1.out', // Ease out effect
   scale: .7, // Scale the element to 1.7 times its original size
   scrollTrigger: {
