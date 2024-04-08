@@ -132,7 +132,7 @@ let distance = document.querySelector('.articles').getBoundingClientRect().top -
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('#parfum3d', {
   y: distance,
-  duration: 2, // Duration of the animation in seconds
+  duration: 1,5, // Duration of the animation in seconds
   ease: 'power1.out', // Ease out effect
   scale: .7, // Scale the element to 1.7 times its original size
   scrollTrigger: {
